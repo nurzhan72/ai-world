@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Жасанды интеллект</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: #0a0f1f; color: #e2e8f0; }
+
+    header {
+      position: fixed; width: 100%; top: 0; left: 0;
+      background: rgba(10,15,31,0.8); backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(56,189,248,0.15);
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 15px 50px; z-index: 100;
+    }
+
+    .logo { font-size: 22px; font-weight: 700; color: #38bdf8; }
+    nav a { color: #cbd5e1; text-decoration: none; margin-left: 25px; font-weight: 500; transition: 0.3s; }
+    nav a:hover { color: #38bdf8; }
+
+    .hero {
+      height: 100vh; display: flex; flex-direction: column;
+      justify-content: center; align-items: center; text-align: center;
+      background: radial-gradient(circle at top, #1e293b 0%, #0a0f1f 80%); padding: 0 20px;
+    }
+    .hero h1 { font-size: 60px; color: #38bdf8; margin-bottom: 15px; }
+    .hero p { font-size: 18px; color: #94a3b8; max-width: 600px; margin-bottom: 30px; }
+    .hero a {
+      background: #38bdf8; color: #0a0f1f; padding: 12px 32px; border-radius: 30px;
+      font-weight: 600; text-decoration: none; box-shadow: 0 0 25px rgba(56,189,248,0.5); transition: 0.3s;
+    }
+    .hero a:hover { background: #0ea5e9; box-shadow: 0 0 40px rgba(14,165,233,0.8); transform: scale(1.05); }
+
+    section { padding: 100px 40px; max-width: 1100px; margin: 0 auto; text-align: center; }
+    h2 { color: #38bdf8; font-size: 34px; margin-bottom: 25px; }
+
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 30px; margin-top: 40px; }
+    .card {
+      background: rgba(255,255,255,0.03); padding: 30px 25px; border-radius: 18px;
+      border: 1px solid rgba(56,189,248,0.1); box-shadow: 0 0 15px rgba(56,189,248,0.05); transition: 0.3s;
+    }
+    .card:hover { transform: translateY(-8px); border-color: #38bdf8; box-shadow: 0 0 25px rgba(56,189,248,0.3); background: rgba(56,189,248,0.08); }
+    .card h3 { color: #38bdf8; margin-bottom: 10px; font-size: 20px; }
+    .card p { color: #cbd5e1; font-size: 15px; line-height: 1.6; }
+
+    .img-banner { width: 100%; border-radius: 15px; margin-top: 40px; box-shadow: 0 0 35px rgba(56,189,248,0.1); }
+
+    .future, .contact-box {
+      background: rgba(255,255,255,0.03); border-radius: 20px; padding: 60px 40px;
+      box-shadow: 0 0 25px rgba(56,189,248,0.1); border: 1px solid rgba(56,189,248,0.1);
+    }
+
+    .future p, .contact-box p { color: #cbd5e1; line-height: 1.8; font-size: 17px; }
+
+    .author {
+      background: rgba(56,189,248,0.05); padding: 60px 30px; border-radius: 20px; margin-top: 60px;
+      box-shadow: 0 0 30px rgba(56,189,248,0.1);
+    }
+
+    .author h3 { color: #38bdf8; font-size: 24px; margin-bottom: 10px; }
+    .author p { color: #cbd5e1; }
+
+    footer {
+      text-align: center; padding: 25px; font-size: 14px; color: #64748b;
+      background: #020617; border-top: 1px solid rgba(56,189,248,0.1); margin-top: 60px;
+    }
+
+    @media (max-width: 768px) {
+      header { padding: 10px 20px; }
+      .hero h1 { font-size: 40px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">🤖 AI WORLD</div>
+    <nav>
+      <a href="#about">Басты</a>
+      <a href="#uses">Қолдану</a>
+      <a href="#future">Болашағы</a>
+      <a href="#author">Автор</a>
+      <a href="#contact">Байланыс</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="about">
+    <h1>Жасанды интеллект</h1>
+    <p>AI — бұл деректер арқылы үйреніп, шешім қабылдай алатын ақылды технология.</p>
+    <a href="#uses">Толығырақ ↓</a>
+  </section>
+
+  <section id="uses">
+    <h2>AI қайда қолданылады?</h2>
+    <div class="cards">
+      <div class="card"><h3>Медицина</h3><p>AI ауруларды ерте анықтап, емдеу тәсілдерін жетілдіреді.</p></div>
+      <div class="card"><h3>Білім</h3><p>Оқу жүйелері оқушының қабілетіне қарай жеке жоспар құра алады.</p></div>
+      <div class="card"><h3>Көлік</h3><p>Өздігінен жүретін көліктер жол қауіпсіздігін арттырады.</p></div>
+      <div class="card"><h3>Қаржы</h3><p>AI алаяқтықты анықтап, қаржы операцияларын қорғайды.</p></div>
+    </div>
+    <img class="img-banner" src="https://miro.medium.com/v2/resize:fit:1200/1*51OLR65q9bXx5j2J8jCUgA.png" alt="AI Image">
+  </section>
+
+  <section id="future">
+    <h2>AI болашағы</h2>
+    <div class="future">
+      <p>Жасанды интеллект болашақта адамның серігіне айналады.  
+      Ол өндіріс, ғылым, медицина және тұрмыс салаларында кеңінен қолданылады.  
+      Ең бастысы — адам мен AI бірігіп, жаңа мүмкіндіктер ашады.</p>
+    </div>
+  </section>
+
+  <section class="author" id="author">
+    <h3>Автор туралы</h3>
+    <p>Сайтты жасаған: <strong>Жорықбай Нұржан</strong></p>
+  </section>
+
+  <!-- 🔽 ЖАҢА БӨЛІМ: Байланыс -->
+  <section id="contact">
+    <h2>Байланыс</h2>
+    <div class="contact-box">
+      <p>Менімен байланыс үшін:</p>
+      <p>📧 Email: <strong>nurzhan@example.com</strong></p>
+      <p>📱 Телефон: <strong>+7 777 777 7777</strong></p>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 AI World — Жасанды интеллект әлемі.
+  </footer>
+
+</body>
+</html>
